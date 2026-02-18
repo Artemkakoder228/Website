@@ -22,6 +22,7 @@
             </div>
         </div>
     </header>
+
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
@@ -33,7 +34,7 @@
                     Зробіть перший крок до швидких та безпечних обмінів – завантажте застосунок або дізнайтеся більше про наші можливості нижче.
                 </p>
 
-                <div class="download-buttons">
+                <div class="download-buttons" style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
                     <a href="instruction.html" class="btn-store btn-apple">
                         <div>
                             <span class="btn-text">Завантажити застосунок</span>
@@ -52,6 +53,30 @@
             </div>
         </div>
     </section>
+
+    <section class="api-cta" style="padding: 60px 0; background: #f9f9f9; text-align: center; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+        <div class="container">
+            <h2 style="font-size: 2rem; margin-bottom: 15px; color: #333;">Підтримка багатьох <span>джерел даних</span></h2>
+            <p style="max-width: 700px; margin: 0 auto 30px; color: #666; line-height: 1.6;">
+                Наша програма інтегрована з провідними банками та криптобіржами. Перегляньте повний список підтримуваних сервісів та документацію.
+            </p>
+            <a href="ApiList.html" class="btn-api-link" style="
+                display: inline-block;
+                padding: 15px 40px;
+                background-color: #3498db;
+                color: white;
+                text-decoration: none;
+                border-radius: 30px;
+                font-weight: bold;
+                box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+                transition: transform 0.3s, background 0.3s;
+            ">
+                <i class="fa-solid fa-plug" style="margin-right: 10px;"></i>
+                Перейти до списку API
+            </a>
+        </div>
+    </section>
+
     <section id="features-section" class="features">
         <div class="container">
             <div class="section-header">
@@ -64,35 +89,35 @@
                         <i class="fa-solid fa-bolt"></i>
                     </div>
                     <h3>Миттєві транзакції</h3>
-                    <p>Обмінюйте гривню, долар та іншівалюти, або біткоїн та безліч інших монет за лічені секунди. Жодних затримок, актуальні курси за лічені секунди.</p>
+                    <p>Обмінюйте гривню, долар та інші валюти, або біткоїн та безліч інших монет за лічені секунди. Жодних затримок, актуальні курси за лічені секунди.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fa fa-database" aria-hidden="true"></i>
                     </div>
-                    <h3>Збереження всіх необхідниих даних в застосунку</h3>
-                    <p>Створення локальних баз даних на основі SQLite для збереження історії конвертацій та подальшого їх аналізу</p>
+                    <h3>Збереження даних</h3>
+                    <p>Створення локальних баз даних на основі SQLite для збереження історії конвертацій та подальшого їх аналізу.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fa fa-globe" aria-hidden="true"></i>
                     </div>
                     <h3>Все в одному місці</h3>
-                    <p>Більше не потрібно десяток додатків. Керуйте традиційними валютами та криптопою в одному зручному та інтуїтивному інтерфейсі</p>
+                    <p>Керуйте традиційними валютами та криптопою в одному зручному та інтуїтивному інтерфейсі.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fa fa-line-chart" aria-hidden="true"></i>
                     </div>
                     <h3>Візуалізація даних</h3>
-                    <p>Побудова в реальному часі графік зміни курсу криптовалют та відбраження історії курсу в графіках</p>
+                    <p>Побудова в реальному часі графік зміни курсу криптовалют та відбраження історії курсу в графіках.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fa fa-link" aria-hidden="true"></i>
                     </div>
                     <h3>API з різних джерел</h3>
-                    <p>З'являється список API з інших джерел та їх постійне оновлення</p>
+                    <p>З'являється список API з інших джерел та їх постійне оновлення.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -104,6 +129,7 @@
             </div>
         </div>
     </section>
+
     <section class="info-section currencies-section">
         <div class="container">
             <div class="info-content reverse">
@@ -112,10 +138,9 @@
                 </div>
                 <div class="info-text">
                     <h2>Про традиційні валюти</h2>
-                    <p>Традиційні валюти, також відомі як фіатні гроші, є офіційними засобами платежу, випущеними урядом або центральним банком країни. Вони включають гривню (UAH), долар США (USD), євро (EUR) та багато інших. Наш додаток дозволяє швидко конвертувати між цими валютами, використовуючи актуальні курси з надійних джерел.</p>
-                    <p>Переваги традиційних валют:</p>
+                    <p>Традиційні валюти, також відомі як фіатні гроші, є офіційними засобами платежу, випущеними урядом або центральним банком країни. Наш додаток дозволяє швидко конвертувати між цими валютами.</p>
                     <ul>
-                        <li>Широка прийнятність у повсякденних транзакціях</li>
+                        <li>Широка прийнятність</li>
                         <li>Регулювання центральними банками</li>
                         <li>Стабільність у короткостроковій перспективі</li>
                     </ul>
@@ -123,6 +148,7 @@
             </div>
         </div>
     </section>
+
     <section class="info-section crypto-section">
         <div class="container">
             <div class="info-content">
@@ -131,18 +157,17 @@
                 </div>
                 <div class="info-text">
                     <h2>Про криптовалюту</h2>
-                    <p>Криптовалюта - це цифровий або віртуальний актив, який використовує криптографію для забезпечення безпеки. На відміну від традиційних валют, криптовалюти не контролюються жодним центральним органом. Найвідоміші приклади - Bitcoin (BTC), Ethereum (ETH), та багато інших альткоїнів.</p>
-                    <p>Особливості криптовалют:</p>
+                    <p>Криптовалюта - це цифровий або віртуальний актив, який використовує криптографію для забезпечення безпеки. Найвідоміші приклади - Bitcoin (BTC) та Ethereum (ETH).</p>
                     <ul>
-                        <li>Децентралізація та відсутність контролю</li>
+                        <li>Децентралізація</li>
                         <li>Висока волатильність курсів</li>
-                        <li>Можливість швидких міжнародних переказів</li>
-                        <li>Технологія блокчейн для прозорості</li>
+                        <li>Технологія блокчейн</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="info-section database-section">
         <div class="container">
             <div class="info-content reverse">
@@ -151,13 +176,11 @@
                 </div>
                 <div class="info-text">
                     <h2>Про базу даних</h2>
-                    <p>Наш додаток використовує локальну базу даних на основі SQLite для збереження всієї історії ваших конвертацій. Це дозволяє аналізувати ваші фінансові операції, відстежувати зміни курсів та будувати графіки для кращого розуміння тенденцій.</p>
-                    <p>Переваги використання бази даних:</p>
+                    <p>Наш додаток використовує локальну базу даних на основі SQLite для збереження всієї історії ваших конвертацій.</p>
                     <ul>
-                        <li>Збереження даних локально для конфіденційності</li>
+                        <li>Локальна конфіденційність</li>
                         <li>Швидкий доступ до історії</li>
-                        <li>Можливість аналізу та візуалізації даних</li>
-                        <li>Не залежить від інтернет-з'єднання для збережених даних</li>
+                        <li>Аналіз та візуалізація</li>
                     </ul>
                 </div>
             </div>
@@ -167,12 +190,14 @@
     <footer>
         <div class="container">
             <p>© 2025 Currency Convertor. Дякуємо, що звернулися саме до нас.</p>
-            <p style="margin-top: 10px; font-size: 0.8rem;">
+            <div style="margin-top: 10px; font-size: 0.8rem;">
+                <a href="ApiList.html" style="color: var(--text-gray); text-decoration: none; margin: 0 10px;">Список API</a> | 
                 <a href="#" style="color: var(--text-gray); text-decoration: none; margin: 0 10px;">Зворотній зв'язок</a> | 
                 <a href="#" style="color: var(--text-gray); text-decoration: none; margin: 0 10px;">artomostapenka@gmail.com</a>
-            </p>
+            </div>
         </div>
     </footer>
+
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
