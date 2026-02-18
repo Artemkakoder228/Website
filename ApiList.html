@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доступні API - Currency Converter</title>
+    <link rel="icon" href="images/exchange_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="api.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/exchange_icon.ico" alt="Logo" class="logo-image">
+                Currency Converter
+            </div>
+            <div class="auth-buttons">
+                <a href="index.html" class="btn-auth">Головна</a>
+                <span class="separator">|</span>
+                <a href="login.html" class="btn-auth">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="api-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="animate-on-scroll">Банківські установи та агрегатори</h2>
+                <p class="hero-subtitle animate-on-scroll">Офіційні курси валют від державних та комерційних фінансових організацій.</p>
+            </div>
+
+            <div class="api-grid">
+                <div class="api-card animate-on-scroll">
+                    <div class="api-status status-embedded">Вбудовано</div>
+                    <h3><i class="fa-solid fa-landmark"></i> NBU API</h3>
+                    <div class="api-copy-container">
+                        <span class="api-url" id="nbu-url">https://bank.gov.ua/NBUStatService/v1/statistich/exchange?json</span>
+                        <button class="btn-copy" onclick="copyToClipboard('nbu-url')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                    <p>Офіційні курси фіатних валют НБУ.</p>
+                    <div class="currency-tags">
+                        <span class="tag">USD</span> <span class="tag">EUR</span> <span class="tag">PLN</span> <span class="tag">GBP</span> <span class="tag">JPY</span> <span class="tag">CZK</span>
+                    </div>
+                    <a href="https://bank.gov.ua/ua/open-data/api-dev" target="_blank" class="btn-api">Документація</a>
+                </div>
+
+                <div class="api-card animate-on-scroll">
+                    <div class="api-status status-embedded">Вбудовано</div>
+                    <h3><i class="fa-solid fa-mobile-screen-button"></i> Monobank API</h3>
+                    <div class="api-copy-container">
+                        <span class="api-url" id="mono-url">https://api.monobank.ua/bank/currency</span>
+                        <button class="btn-copy" onclick="copyToClipboard('mono-url')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                    <p>Курси валют у реальному часі від Mono.</p>
+                    <div class="currency-tags">
+                        <span class="tag">USD</span> <span class="tag">EUR</span>
+                    </div>
+                    <a href="https://api.monobank.ua/docs/" target="_blank" class="btn-api">Документація</a>
+                </div>
+
+                <div class="api-card animate-on-scroll">
+                    <div class="api-status status-embedded">Вбудовано</div>
+                    <h3><i class="fa-brands fa-google"></i> Google Finance</h3>
+                    <div class="api-copy-container">
+                        <span class="api-url" id="google-url">https://www.google.com/finance/quote/USD-UAH</span>
+                        <button class="btn-copy" onclick="copyToClipboard('google-url')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                    <p>Глобальні фінансові дані Google.</p>
+                    <div class="currency-tags">
+                        <span class="tag">USD</span> <span class="tag">EUR</span>
+                    </div>
+                    <a href="https://www.google.com/finance/" target="_blank" class="btn-api">Документація</a>
+                </div>
+
+                <div class="api-card animate-on-scroll">
+                    <div class="api-status status-not-embedded">Не вбудовано</div>
+                    <h3><i class="fa-solid fa-building-columns"></i> Privat24 API</h3>
+                    <div class="api-copy-container">
+                        <span class="api-url" id="privat-url">https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11</span>
+                        <button class="btn-copy" onclick="copyToClipboard('privat-url')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                    <p>Курси готівкових валют ПриватБанку.</p>
+                    <div class="currency-tags">
+                        <span class="tag">USD</span> <span class="tag">EUR</span>
+                    </div>
+                    <a href="https://api.privatbank.ua/" target="_blank" class="btn-api">Документація</a>
+                </div>
+
+                <div class="api-card animate-on-scroll">
+                    <div class="api-status status-not-embedded">Не вбудовано</div>
+                    <h3><i class="fa-solid fa-university"></i> Oschadbank API</h3>
+                    <div class="api-copy-container">
+                        <span class="api-url" id="oschad-url">https://www.oschadbank.ua/currency-rate</span>
+                        <button class="btn-copy" onclick="copyToClipboard('oschad-url')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                    <p>Дані курсів валют Ощадбанку.</p>
+                    <div class="currency-tags">
+                        <span class="tag">USD</span> <span class="tag">EUR</span>
+                    </div>
+                    <a href="https://www.oschadbank.ua/" target="_blank" class="btn-api">Документація</a>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 80px;">
+                <h2 class="animate-on-scroll">Криптобіржі</h2>
+                <p class="hero-subtitle animate-on-scroll">Ринкові котирування та дані торгів з найбільших світових платформ.</p>
+            </div>
+
+            <div class="api-grid">
+                <div class="api-card animate-on-scroll">
+                    <div class="api-status status-embedded">Вбудовано</div>
+                    <h3><i class="fa-solid fa-chart-line"></i> Binance API</h3>
+                    <div class="api-copy-container">
+                        <span class="api-url" id="binance-url">https://api.binance.com/api/v3/ticker/price</span>
+                        <button class="btn-copy" onclick="copyToClipboard('binance-url')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                    <p>Ринкові котирування Binance.</p>
+                    <div class="currency-tags">
+                        <span class="tag">BTC</span> <span class="tag">ETH</span> <span class="tag">BNB</span> <span class="tag">SOL</span> <span class="tag">XRP</span> <span class="tag">DOGE</span>
+                    </div>
+                    <a href="https://binance-docs.github.io/apidocs/spot/en/" target="_blank" class="btn-api">Документація</a>
+                </div>
+
+                <div class="api-card animate-on-scroll">
+                    <div class="api-status status-embedded">Вбудовано</div>
+                    <h3><i class="fa-solid fa-coins"></i> Bybit API</h3>
+                    <div class="api-copy-container">
+                        <span class="api-url" id="bybit-url">https://api.bybit.com/v5/market/tickers?category=spot</span>
+                        <button class="btn-copy" onclick="copyToClipboard('bybit-url')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                    <p>API котирувань біржі Bybit.</p>
+                    <div class="currency-tags">
+                        <span class="tag">BTC</span> <span class="tag">ETH</span> <span class="tag">BNB</span> <span class="tag">SOL</span> <span class="tag">XRP</span> <span class="tag">DOGE</span>
+                    </div>
+                    <a href="https://bybit-exchange.github.io/docs/v5/intro" target="_blank" class="btn-api">Документація</a>
+                </div>
+
+                <div class="api-card animate-on-scroll">
+                    <div class="api-status status-embedded">Вбудовано</div>
+                    <h3><i class="fa-solid fa-arrow-right-arrow-left"></i> OKX API</h3>
+                    <div class="api-copy-container">
+                        <span class="api-url" id="okx-url">https://www.okx.com/api/v5/market/tickers?instType=SPOT</span>
+                        <button class="btn-copy" onclick="copyToClipboard('okx-url')"><i class="fa-regular fa-copy"></i></button>
+                    </div>
+                    <p>Ринкові дані криптобіржі OKX.</p>
+                    <div class="currency-tags">
+                        <span class="tag">BTC</span> <span class="tag">ETH</span> <span class="tag">BNB</span> <span class="tag">SOL</span> <span class="tag">XRP</span> <span class="tag">DOGE</span>
+                    </div>
+                    <a href="https://www.okx.com/docs-v5/en/" target="_blank" class="btn-api">Документація</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Currency Convertor. Дякуємо, що звернулися саме до нас.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Посилання скопійовано!');
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

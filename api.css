@@ -1,0 +1,143 @@
+/* api.css - Стилі для сторінки API List */
+
+.api-section {
+    padding: 80px 0;
+    min-height: 80vh;
+}
+
+/* Заголовок секції (Банки / Біржі) */
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+.api-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.api-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.api-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* --- СТИЛІ СТАТУСІВ --- */
+
+.api-status {
+    align-self: flex-start;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+/* Колір для вбудованих (Зелений) */
+.status-embedded {
+    background: #10B981; 
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+/* Колір для НЕ вбудованих (Помаранчевий) */
+.status-not-embedded {
+    background: #F59E0B; 
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+}
+
+/* --- КОПІЮВАННЯ API --- */
+
+.api-copy-container {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.api-url {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+.btn-copy {
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.2s;
+}
+
+.btn-copy:hover {
+    color: var(--text-light);
+}
+
+/* --- ВАЛЮТНІ ТЕГИ --- */
+
+.currency-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 15px 0;
+}
+
+.tag {
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* --- КНОПКА ДОКУМЕНТАЦІЇ --- */
+
+.btn-api {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background: var(--gradient-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.btn-api:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .api-grid {
+        grid-template-columns: 1fr;
+    }
+}
