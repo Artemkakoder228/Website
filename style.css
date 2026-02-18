@@ -559,3 +559,80 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+/* Стилізація секції */
+.api-cta {
+    padding: 80px 0;
+    /* Сучасний світлий градієнт замість однотонного фону */
+    background: var(--bg-dark);
+    text-align: center;
+    border-top: 1px solid #e1e8ed;
+    border-bottom: 1px solid #e1e8ed;
+    position: relative;
+}
+
+.api-cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+/* Градієнтний текст для акценту */
+.api-cta-title span {
+    background: var(--text-light);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.api-cta-description {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    color: #5a6c7d;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Стилізація та анімація кнопки */
+.btn-api-link {
+    display: inline-block;
+    padding: 16px 45px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease; /* Плавність для всіх змін */
+}
+
+.btn-api-link i {
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Ефекти при наведенні (Hover) */
+.btn-api-link:hover {
+    transform: translateY(-4px) scale(1.03); /* Кнопка піднімається */
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+    background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+/* Анімація іконки всередині при наведенні */
+.btn-api-link:hover i {
+    animation: plug-wiggle 0.5s ease-in-out infinite;
+}
+
+/* Ефект при кліку */
+.btn-api-link:active {
+    transform: translateY(-1px);
+}
+
+/* Ключові кадри для анімації іконки */
+@keyframes plug-wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
